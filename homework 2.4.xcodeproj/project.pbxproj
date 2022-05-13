@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		048F3648282D514B007A5920 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F3647282D514B007A5920 /* main.swift */; };
+		048F364F282D5172007A5920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F364E282D5172007A5920 /* User.swift */; };
+		048F3651282D520D007A5920 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F3650282D520D007A5920 /* CountryCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		048F3644282D514B007A5920 /* homework 2.4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "homework 2.4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F3647282D514B007A5920 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		048F364E282D5172007A5920 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		048F3650282D520D007A5920 /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				048F3647282D514B007A5920 /* main.swift */,
+				048F364E282D5172007A5920 /* User.swift */,
+				048F3650282D520D007A5920 /* CountryCode.swift */,
 			);
 			path = "homework 2.4";
 			sourceTree = "<group>";
@@ -120,7 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048F364F282D5172007A5920 /* User.swift in Sources */,
 				048F3648282D514B007A5920 /* main.swift in Sources */,
+				048F3651282D520D007A5920 /* CountryCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
