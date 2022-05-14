@@ -1,5 +1,3 @@
-//Создать класс User c 2 параметрами сountryCode типа Enum и phoneNumber. В main cоздать пустой массив из User. Cделать так, чтобы программа запрашивала ввод данных страны и номера. После ввода добавлять данные в объект User, объект в массив. Действие должно повторяться несколько раз. В конце сделать поисковик по стране и выводить все номера только с определенной страны
-
 var users: [String] = []
 var code = 0
 
@@ -15,6 +13,7 @@ case "UK":
     code = CountryCode.UK.rawValue
 default:
     print("Error")
+    break
 }
     print("Enter the number!")
     var number = readLine()
@@ -24,26 +23,42 @@ default:
     users.append("\(code), \(number!)")
     print(users)
 
-//    print("Searching system is availble, choose a country code")
-//    var search = readLine()
-//    for (index, value) in users.enumerated() {
-//        switch
-//    }
+}
+
+
+
+extension User {
+    func showNumberOfTheItaly() {
+        if self.countryCode == CountryCode.Italy {
+            print(self.phoneNumber)
+        }
+    }
+    func showNumberOfTheUSA() {
+        if self.countryCode == CountryCode.USA {
+            print(self.phoneNumber)
+        }
+    }
+    func showNumberOfTheUK() {
+        if self.countryCode == CountryCode.UK {
+            print(self.phoneNumber)
+        }
+    }
+
 }
 
 
 print("Searching system is availble, choose a country code")
 var search = readLine()
-for (index, value) in users.enumerated() {
+for user in users {
     switch search {
     case "USA":
-        print(value)
+        user.showNumberOfTheUSA()
     case "UK":
-        print(value)
+        user.showNumberOfTheUK()
     case "Italy":
-        print(value)
+        user.showNumberOfTheItaly()
 default:
-    print("error")
+    print("Error")
     }
-
 }
+
