@@ -1,4 +1,4 @@
-var users: [String] = []
+var users: [User] = []
 var code = 0
 
 for i in 1...3 {
@@ -13,19 +13,14 @@ case "UK":
     code = CountryCode.UK.rawValue
 default:
     print("Error")
-    break
 }
     print("Enter the number!")
     var number = readLine()
     print("+\(code) \(number!)")
 
-
     users.append("\(code), \(number!)")
     print(users)
-
 }
-
-
 
 extension User {
     func showNumberOfTheItaly() {
@@ -43,10 +38,11 @@ extension User {
             print(self.phoneNumber)
         }
     }
-
 }
 
 
+var user  = User(countryCode: .UK, phoneNumber: 2434)
+user.showNumberOfTheUK()
 print("Searching system is availble, choose a country code")
 var search = readLine()
 for user in users {
