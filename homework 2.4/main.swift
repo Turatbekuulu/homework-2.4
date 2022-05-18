@@ -1,60 +1,58 @@
 var users: [User] = []
-var code = 0
 
-for i in 1...3 {
-print("Enter the country!")
-var countryEnter = readLine()
-switch countryEnter {
+func addUser() {
+print("Choose the country:")
+    let country = readLine()
+
+print("Enter the number:")
+    let number = readLine()
+
+    let user = User()
+user.phoneNumber = number!
+switch country {
 case "USA":
-    code = CountryCode.USA.rawValue
-case "Italy":
-    code = CountryCode.Italy.rawValue
-case "UK":
-    code = CountryCode.UK.rawValue
+    user.countryCode = .USA
+case "Kyrgyzstan":
+    user.countryCode = .Kyrgyzstan
+case "Russia":
+    user.countryCode = .Russia
 default:
-    print("Error")
+    print("This country has no ability to be serviced")
 }
-    print("Enter the number!")
-    var number = readLine()
-    print("+\(code) \(number!)")
-
-    users.append("\(code), \(number!)")
-    print(users)
+    users.append(user)
 }
 
-extension User {
-    func showNumberOfTheItaly() {
-        if self.countryCode == CountryCode.Italy {
-            print(self.phoneNumber)
-        }
-    }
-    func showNumberOfTheUSA() {
-        if self.countryCode == CountryCode.USA {
-            print(self.phoneNumber)
-        }
-    }
-    func showNumberOfTheUK() {
-        if self.countryCode == CountryCode.UK {
-            print(self.phoneNumber)
-        }
-    }
+for i in 1...5 {
+    addUser()
 }
 
 
-var user  = User(countryCode: .UK, phoneNumber: 2434)
-user.showNumberOfTheUK()
-print("Searching system is availble, choose a country code")
-var search = readLine()
+print("Searching sistem is availible, enter the info:")
+var countrySearching = readLine()
+
 for user in users {
-    switch search {
-    case "USA":
-        user.showNumberOfTheUSA()
-    case "UK":
-        user.showNumberOfTheUK()
-    case "Italy":
-        user.showNumberOfTheItaly()
-default:
-    print("Error")
+    switch countrySearching {
+        
+case "USA":
+        if user .countryCode == .USA {
+            print("+\(user.countryCode.rawValue) \(user.phoneNumber)")
+        }
+    
+case "Kyrgyzstan":
+    if user .countryCode == .Kyrgyzstan {
+        print("+\(user.countryCode.rawValue) \(user.phoneNumber)")
+    }
+
+
+case "Russia":
+    if user .countryCode == .Russia {
+        print("+\(user.countryCode.rawValue) \(user.phoneNumber)")
+    }
+
+    default:
+        print("Error")
     }
 }
+
+
 

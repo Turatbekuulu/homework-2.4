@@ -1,5 +1,8 @@
 enum CountryCode: Int {
     case USA = 1
-    case Italy = 39
-    case UK = 44
+    case Russia = 7
+    case Kyrgyzstan = 996
+    case None = 0
 }
+
+
